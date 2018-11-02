@@ -1,5 +1,6 @@
 require 'gosu'
 require 'lib/snake'
+require 'lib/fruit'
 # main class to the snake game
 class SnakeGame < Gosu::Window
 
@@ -10,6 +11,7 @@ class SnakeGame < Gosu::Window
   def initialize
     super(WIDTH, HEIGHT, false, 1000/15)
     @snake = Snake.new
+    @fruit = Fruit.new
   end
 
   def update
