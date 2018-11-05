@@ -15,10 +15,21 @@ class SnakeGame < Gosu::Window
   end
 
   def update
+    if @snake.x == @fruit.x && @snake.y == @fruit.y
+      @snake.increase
+      @fruit.regenerate
+    end
+
+    @fruit.update
     @snake.update
+
+    @snake.pos[0..-2].each do |x, y|
+      @snake.reset if x == @snake.x && y == @snake.y
+    end
   end
 
   def draw
+    @fruit.draw
     @snake.draw
   end
 
