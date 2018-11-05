@@ -1,21 +1,26 @@
 # Fruit Class to collet with snake in Game
 class Fruit
-  attr :posix, :posiy
+  attr_accessor :x, :y
 
   def initialize
-    @posix = 5
-    @posiy = 5
+    @x = 15
+    @y = 15
   end
 
   def update; end
 
   def draw
     Gosu.draw_rect(
-      @posx * SnakeGame::TILE, # posicao x
-      @posy * SnakeGame::TILE, # posicao y
+      @x * SnakeGame::TILE, # posicao x
+      @y * SnakeGame::TILE, # posicao y
       SnakeGame::TILE - 1, # tamanho
       SnakeGame::TILE - 1, # altura
       Gosu::Color::RED
     )
+  end
+
+  def regenerate
+    @x = (rand * SnakeGame::TILE).floor
+    @y = (rand * SnakeGame::TILE).floor
   end
 end
