@@ -1,6 +1,6 @@
 require 'gosu'
-require 'lib/snake'
-require 'lib/fruit'
+require 'lib/snake_game/snake'
+require 'lib/snake_game/fruit'
 # main class to the snake game
 class SnakeGame < Gosu::Window
 
