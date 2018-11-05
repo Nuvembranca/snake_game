@@ -1,3 +1,3 @@
 task :console do
-  exec 'irb -r snake_game -I ./'
+  exec 'irb -r lib/snake_game -I ./'
 end
