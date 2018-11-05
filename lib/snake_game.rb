@@ -39,6 +39,7 @@ class SnakeGame < Gosu::Window
     when Gosu::KbDown  then @snake.down
     when Gosu::KbLeft  then @snake.left
     when Gosu::KbRight  then @snake.right
+    when Gosu::KbEscape then close
     end
   end
 end
