@@ -5,8 +5,8 @@ require 'lib/fruit'
 class SnakeGame < Gosu::Window
 
   WIDTH = HEIGHT = 600.freeze
-  TILE  = 10
-  WIDTH_IN_TILES = WIDTH/TILE
+  TILE  = 10.freeze
+  WIDTH_IN_TILE = WIDTH/TILE
 
   def initialize
     super(WIDTH, HEIGHT, false, 1000/15)
